@@ -56,7 +56,7 @@ namespace Football.API.Controllers
 			var created = await _playerService.CreatePlayerAsync(newPlayer);
 			if (!created)
 			{
-				return BadRequest(new { error = "Unable to create tag" });
+				return BadRequest(new { error = "Unable to create player" });
 			}
 			
 			return Ok(_mapper.Map<PlayerDetailResponse>(newPlayer));
